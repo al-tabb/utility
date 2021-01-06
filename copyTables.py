@@ -11,7 +11,7 @@ def main():
     password = "xxx"
     sourceConn = psycopg2.connect("dbname="+sourceDatabase+" user="+user+" password="+password+" host="+host+" port="+port)
     sourceCur = sourceConn.cursor()
-    targetConn = psycopg2.connect("dbname="+sourceDatabase+" user="+user+" password="+password+" host="+host+" port="+port)
+    targetConn = psycopg2.connect("dbname="+targetDatabase+" user="+user+" password="+password+" host="+host+" port="+port)
     targetCur = targetConn.cursor()
     file1 = open(textPath, 'r') 
     Lines = file1.readlines()   
